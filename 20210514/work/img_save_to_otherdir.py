@@ -10,8 +10,10 @@ for a,b,c in os.walk("c://"):
                     print(newpath)
                     img=cv2.imread(file1)
                     cv2.imshow("bai",img)
-                    if cv2.waitKey(1000)&0xFF==ord("q"):
+                    if cv2.waitKey(0)&0xFF==ord("q"):
                         shutil.copy(file1,newpath)
+                        break
+                    if cv2.waitKey(0)&0xFF==ord("s"):
                         break
             except:
                 print("dfdf")
